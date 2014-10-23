@@ -22,12 +22,26 @@ namespace CRUDApp.Web.Models
 
         #endregion Properties
 
+        #region Class Variables
+
+        internal IDatabaseManager<StudentsModel> _DBManager;
+
+        #endregion Class Variables
+
         #region Constructor
 
         public StudentsModel()
         {
             // Indicate a new Record.
             this.ID = -1;
+            this.FirstName = "John";
+            _DBManager = new MockDatabase();
+        }
+
+        public StudentsModel(IDatabaseManager<StudentsModel> theManager) : this()
+        {
+            _DBManager = theManager;
+            this.FirstName = "Bob";
         }
 
         #endregion Constructor
@@ -40,7 +54,12 @@ namespace CRUDApp.Web.Models
         /// <returns>A Collection of all of the records</returns>
         public static ICollection<StudentsModel> GetRecords()
         {
-            throw new NotImplementedException();
+            return GetRecords(new MockDatabase());
+        }
+
+        public static ICollection<StudentsModel> GetRecords(IDatabaseManager<StudentsModel> theManager)
+        {
+            return theManager.GetAll();
         }
 
         /// <summary>
@@ -50,7 +69,12 @@ namespace CRUDApp.Web.Models
         /// <returns></returns>
         public static StudentsModel GetRecord(int idOfRecord)
         {
-            throw new NotImplementedException();
+            return GetRecord(idOfRecord, new MockDatabase());
+        }
+
+        public static StudentsModel GetRecord(int idOfRecord, IDatabaseManager<StudentsModel> theManager)
+        {
+            return theManager.GetRecord(idOfRecord);
         }
 
         #endregion Static Methods
