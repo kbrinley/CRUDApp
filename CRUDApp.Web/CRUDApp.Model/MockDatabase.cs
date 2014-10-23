@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CRUDApp.Web.Models
+namespace CRUDApp.Model
 {
     public class MockDatabase : IDatabaseManager<StudentsModel>
     {

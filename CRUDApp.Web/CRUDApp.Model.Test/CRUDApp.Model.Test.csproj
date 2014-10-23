@@ -7,8 +7,8 @@
     <ProjectGuid>{09329E79-C69C-4B7C-9740-1F77695675F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRUDApp.Web.Test</RootNamespace>
-    <AssemblyName>CRUDApp.Web.Test</AssemblyName>
+    <RootNamespace>CRUDApp.Model.Test</RootNamespace>
+    <AssemblyName>CRUDApp.Model.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,6 +35,7 @@
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,9 +54,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CRUDApp.Web\CRUDApp.Web.csproj">
-      <Project>{aaa86664-f24d-44f2-a407-34d7926c7d20}</Project>
-      <Name>CRUDApp.Web</Name>
+    <ProjectReference Include="..\CRUDApp.Model\CRUDApp.Model.csproj">
+      <Project>{62846bef-7fc5-44e8-8c20-b2479eb73c1c}</Project>
+      <Name>CRUDApp.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

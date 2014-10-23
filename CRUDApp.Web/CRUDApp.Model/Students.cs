@@ -1,23 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace CRUDApp.Web.Models
+namespace CRUDApp.Model
 {
     public class StudentsModel : IDataModel<StudentsModel>
     {
         #region Properties
-
+        
         public int ID { get; internal set; }
+        
+        [Required()]
         public String FirstName { get; set; }
+        
         public String MiddleName { get; set; }
+
+        [Required()]
         public String LastName { get; set; }
         public String AddressLine1 { get; set; }
         public String AddressLine2 { get; set; }
         public String AddressCity { get; set; }
+        
+        [Required()]
         public String AddressState { get; set; }
+
+        [RegularExpression(@"^/d{5}(-/d{4})?$", 
+            ErrorMessage="AddressZip is not a valid US Zip Code")]
         public String AddressZip { get; set; }
 
         #endregion Properties
@@ -34,14 +45,12 @@ namespace CRUDApp.Web.Models
         {
             // Indicate a new Record.
             this.ID = -1;
-            this.FirstName = "John";
             _DBManager = new MockDatabase();
         }
 
         public StudentsModel(IDatabaseManager<StudentsModel> theManager) : this()
         {
             _DBManager = theManager;
-            this.FirstName = "Bob";
         }
 
         #endregion Constructor

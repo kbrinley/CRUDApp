@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDApp.Web", "CRUDApp.Web\CRUDApp.Web.csproj", "{AAA86664-F24D-44F2-A407-34D7926C7D20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDApp.Web.Test", "CRUDApp.Web.Test\CRUDApp.Web.Test.csproj", "{09329E79-C69C-4B7C-9740-1F77695675F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDApp.Model", "CRUDApp.Model\CRUDApp.Model.csproj", "{62846BEF-7FC5-44E8-8C20-B2479EB73C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDApp.Model.Test", "CRUDApp.Model.Test\CRUDApp.Model.Test.csproj", "{09329E79-C69C-4B7C-9740-1F77695675F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AAA86664-F24D-44F2-A407-34D7926C7D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAA86664-F24D-44F2-A407-34D7926C7D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAA86664-F24D-44F2-A407-34D7926C7D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62846BEF-7FC5-44E8-8C20-B2479EB73C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62846BEF-7FC5-44E8-8C20-B2479EB73C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62846BEF-7FC5-44E8-8C20-B2479EB73C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62846BEF-7FC5-44E8-8C20-B2479EB73C1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09329E79-C69C-4B7C-9740-1F77695675F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09329E79-C69C-4B7C-9740-1F77695675F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09329E79-C69C-4B7C-9740-1F77695675F4}.Release|Any CPU.ActiveCfg = Release|Any CPU

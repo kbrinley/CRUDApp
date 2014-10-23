@@ -2,3 +2,7 @@ CRUDApp.Web/CRUDApp.Web.Test/obj/Debug/*.*
 CRUDApp.Web/CRUDApp.Web/obj/Debug/*.*
 CRUDApp.Web/CRUDApp.Web/bin/*.*
 CRUDApp.Web/CRUDApp.Web.Test/bin/Debug/*.*
+CRUDApp.Web/CRUDApp.Model.Test/bin/*
+CRUDApp.Web/CRUDApp.Model.Test/obj/Debug/*
+CRUDApp.Web/CRUDApp.Model/bin/*
+CRUDApp.Web/CRUDApp.Model/obj/Debug/*

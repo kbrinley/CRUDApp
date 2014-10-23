@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CRUDApp.Web.Test")]
+[assembly: AssemblyTitle("CRUDApp.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CRUDApp.Web.Test")]
+[assembly: AssemblyProduct("CRUDApp.Model")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3904316c-0c1a-4712-918c-ba0fa8539913")]
+[assembly: Guid("3b0b9765-02af-4778-835c-5fbf8544d2c0")]
 
 // Version information for an assembly consists of the following four values:
 //
