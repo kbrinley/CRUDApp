@@ -14,7 +14,7 @@ namespace CRUDApp.Model.Test
     public class StudentsTest
     {
         StudentsModel sm = new StudentsModel();
-        MockDatabase mdb = new MockDatabase();
+        MockDatabase mdb = MockDatabase.TheMockDatabase();
 
         [SetUp]
         public void Setup()
@@ -157,7 +157,7 @@ namespace CRUDApp.Model.Test
         }
 
         [Test]
-        public void Verify_Some_Valid_ZipCodes_Return__No_Validation_Errors()
+        public void Verify_Some_Valid_ZipCodes_Return_No_Validation_Errors()
         {
             sm.FirstName = "John";
             sm.LastName = "Doe";

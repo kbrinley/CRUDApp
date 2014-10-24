@@ -45,7 +45,8 @@ namespace CRUDApp.Model
         {
             // Indicate a new Record.
             this.ID = -1;
-            _DBManager = new MockDatabase();
+            //_DBManager = MockDatabase.TheMockDatabase();
+            _DBManager = SqlDatabase.TheSqlDatabase();
         }
 
         public StudentsModel(IDatabaseManager<StudentsModel> theManager) : this()
@@ -63,7 +64,7 @@ namespace CRUDApp.Model
         /// <returns>A Collection of all of the records</returns>
         public static ICollection<StudentsModel> GetRecords()
         {
-            return GetRecords(new MockDatabase());
+            return GetRecords(SqlDatabase.TheSqlDatabase());
         }
 
         public static ICollection<StudentsModel> GetRecords(IDatabaseManager<StudentsModel> theManager)
@@ -78,7 +79,7 @@ namespace CRUDApp.Model
         /// <returns></returns>
         public static StudentsModel GetRecord(int idOfRecord)
         {
-            return GetRecord(idOfRecord, new MockDatabase());
+            return GetRecord(idOfRecord, MockDatabase.TheMockDatabase());
         }
 
         public static StudentsModel GetRecord(int idOfRecord, IDatabaseManager<StudentsModel> theManager)
@@ -92,12 +93,19 @@ namespace CRUDApp.Model
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            if (this.ID == -1)
+            {
+                return _DBManager.InsertRecord(this);
+            }
+            else
+            {
+                return _DBManager.UpdateRecord(this);
+            }
         }
 
         public bool Delete()
         {
-            throw new NotImplementedException();
+            return _DBManager.DeleteRecord(this);
         }
 
         #endregion Class Methods

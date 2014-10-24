@@ -32,7 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CRUDApp.Model">
+      <HintPath>..\CRUDApp.Web\CRUDApp.Model\bin\Debug\CRUDApp.Model.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="StudentEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StudentEdit.Designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +71,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentEdit.resx">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CRUDApp.Model.StudentsModel2.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
