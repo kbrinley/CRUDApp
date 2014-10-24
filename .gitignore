@@ -6,3 +6,5 @@ CRUDApp.Web/CRUDApp.Model.Test/bin/*
 CRUDApp.Web/CRUDApp.Model.Test/obj/Debug/*
 CRUDApp.Web/CRUDApp.Model/bin/*
 CRUDApp.Web/CRUDApp.Model/obj/Debug/*
+CRUDApp.WinForm/bin/Debug/*
+CRUDApp.WinForm/obj/Debug/*
